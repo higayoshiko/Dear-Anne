@@ -1,0 +1,23 @@
+<%- include("partials/header"); -%>
+
+<div class="container container--sm">
+  <form class="form" action="/settings" method="post">
+    <div class="mb-3">
+      <label class="form-label">Nickname</label>
+      <input type="text" class="form-control" name="nickname" required>
+      <div id="emailHelp" class="form-text">What name should we call you?</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">About Me</label>
+      <textarea class="form-control" name="aboutMe" rows="5" maxlength="50"></textarea>
+      <div id="emailHelp" class="form-text">Tell us about yourself.</div>
+    </div>
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Profile Picture</label>
+      <input class="form-control" name="profileImage" type="file" id="formFile">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

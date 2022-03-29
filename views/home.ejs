@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<%- include("partials/side-profile"); -%>
+
+
+<div class="col-8 post__column"><% posts.forEach(post => { %>
+  <div class="posts__ctn">
+    <a class="post__title--noUnderline" href="/posts/<%= post._id %>"><p class="h1 post__title"><%= post.title %></p></a>
+    <p class="post__content">
+      <%= post.content.substring(0, 400) + "..." %>
+    </p>
+  </div>
+  <% }) %>
+</div>
+</div>
+
+</div>
+
+<%- include("partials/footer"); -%>

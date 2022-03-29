@@ -1,0 +1,145 @@
+*,
+*::before,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  background-color: #F4F9F9;
+  color: #3A3845;
+}
+
+/********** Reusable Container Styles **********/
+.container--sm {
+  max-width: 64rem;
+}
+
+/********** NAVBAR **********/
+.navbar {
+  padding: 1.2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #dce0e0;
+  margin-bottom: 16rem;
+}
+
+.nav__list {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+}
+
+.nav__lists,
+.nav__lists:visited {
+  color: inherit;
+}
+
+
+/********** HOME **********/
+.posts__ctn {
+  margin: 3.2rem 0;
+}
+
+.post__column {
+  padding: 2.4rem;
+}
+
+.post__title {
+color:  #3A3845;
+font-family: 'Oswald', sans-serif;
+}
+
+.nav__lists:hover,
+.post__title:hover,
+.card__icons:hover {
+  color: #F05454;
+}
+
+.post__title--noUnderline {
+  text-decoration: none;
+}
+
+.post__content {
+  font-size: 1.6rem;
+}
+/********** SIDE PROFILE **********/
+.profile_card {
+  max-width: 35rem;
+  margin-top: 5.6rem;
+}
+
+.card__pictures-ctn {
+  height: 35rem;
+}
+
+.card__pictures--bg-ctn {
+  height: 23.2rem;
+  overflow: hidden;
+  background-position: center;
+}
+
+.card_picture--pf {
+  border-radius: 50%;
+  border: .7rem solid #fff;
+  width: 20rem;
+  height: 20rem;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__info-ctn {
+  padding: 1.6rem;
+}
+
+.card__name {
+  font-family: 'Oswald', sans-serif;
+  color: #F05454;
+}
+
+.card__about {
+  font-size: 1.8rem;
+}
+
+.card__icon-ctn {
+ border-top: none;
+}
+
+.card__icons {
+  color: #BBBBBB;
+}
+
+
+/********** FORM **********/
+.form input,
+.form textarea,
+.form button {
+  font-size: inherit;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.form__button-ctn {
+text-align: right;
+}
+
+/********** POST **********/
+
+
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

@@ -1,16 +1,21 @@
 const mongoose = require("mongoose");
 
 const infoSchema = {
-  _id: Number,
   nickname: {
     type: String,
-    required: true
+    required: true,
+    default: "Nickname"
   },
-  aboutMe: String,
-  img: {
-    data: Buffer,
-    contentType: String
+  aboutMe: {
+    type: String,
+    default: "About me"
   }
 }
 
 module.exports = mongoose.model("Info", infoSchema);
+
+
+// img: {
+//   data: Buffer,
+//   contentType: String
+// }

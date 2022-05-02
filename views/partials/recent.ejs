@@ -1,0 +1,12 @@
+<div class="entries-ctn">
+  <h3 class="h3 fw-bold text-uppercase">Previous Entries</h3>
+  <ul class="list-group list-group-flush">
+    <% posts.forEach(post => { %>
+      <li class="list-group-item">
+        <a class="fs-4 text-capitalize text-decoration-none" href="/posts/<%= post._id %>">
+          <%= post.title %>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+</div>

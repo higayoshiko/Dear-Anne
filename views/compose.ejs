@@ -1,6 +1,7 @@
-<%- include("partials/header"); -%>
+<%- include("partials/navbar"); -%>
+<%- include("partials/side-profile"); -%>
 
-<div class="container">
+<div class="post__column home-grid">
   <form class="form" action="/compose" method="post">
     <div class="mb-3">
       <label class="form-label">Post Title</label>
@@ -10,8 +11,8 @@
       <label class="form-label">Content</label>
       <textarea class="form-control" name="content" rows="10" required></textarea>
     </div>
-    <div class="form__button-ctn">
-      <button type="submit" class="btn btn-primary">Primary</button>
+    <div class="text-end">
+      <button type="submit" class="btn btn-dark">Primary</button>
     </div>
   </form>
 </div>

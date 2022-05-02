@@ -3,7 +3,7 @@ const router = express.Router();
 const Entry = require("../models/Entry");
 
 router.get("/", (req, res) => {
-  res.render("compose")
+  res.render("compose");
 });
 
 router.post("/", (req, res) => {

@@ -8,7 +8,7 @@ const port = 3000;
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/dearAnneDB", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017/dearAnneDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 // create routes
 const homeRoute = require("./routes/home");
@@ -19,6 +19,10 @@ const composeRoute = require("./routes/compose");
 app.use("/compose", composeRoute);
 const settingsRoute = require("./routes/settings");
 app.use("/settings", settingsRoute);
+const recentRoute = require("./routes/recent");
+app.use("/partials/recent", recentRoute);
+// const sideProfile = require("./routes/home");
+// app.use("/partials/side-profile", sideProfile);
 
 
 app.listen(port, () => {

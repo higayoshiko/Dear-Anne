@@ -12,114 +12,164 @@ html {
 
 body {
   font-size: 2rem;
-  background-color: #F4F9F9;
-  color: #3A3845;
+  font-family: 'Karla', sans-serif;
+  color: rgba(0, 0, 0);
+  background-color: rgba(230, 230, 230, .6);
 }
 
-/********** Reusable Container Styles **********/
-.container--sm {
-  max-width: 64rem;
+/********** GRID **********/
+.grid {
+  display: grid;
+  grid-template-columns: 5% 22% 73%;
+  height: 100vh;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
 }
 
 /********** NAVBAR **********/
 .navbar {
-  padding: 1.2rem;
-  background-color: #fff;
-  border-bottom: 1px solid #dce0e0;
-  margin-bottom: 16rem;
+  position: fixed;
+  height: 100%;
+  width: 5%;
+  background-color: rgba(255, 255, 255, 1);
+  border-right: .5px solid rgba(0, 0, 0);
 }
 
-.nav__list {
-  font-size: 1.4rem;
-  font-weight: 500;
-  font-family: 'Karla', sans-serif;
-  text-transform: uppercase;
+.navbar-flex {
+  height: 100%;
 }
 
 .nav__lists,
+.nav__lists:link,
 .nav__lists:visited {
-  color: inherit;
+  color: #000;
+  transition: all .3s;
 }
 
-
-/********** HOME **********/
-.posts__ctn {
-  margin: 3.2rem 0;
+.nav__lists:hover {
+  color: #FF6363;
 }
 
-.post__column {
-  padding: 2.4rem;
+.nav__icon {
+  color: #FF6363;
+  margin-top: 2rem;
+  transition: all .1s;
 }
 
-.post__title {
-color:  #3A3845;
-font-family: 'Oswald', sans-serif;
+.nav__icon:hover {
+  color: #000;
+  transform: scale(1.1);
 }
 
-.nav__lists:hover,
-.post__title:hover,
-.card__icons:hover {
-  color: #F05454;
-}
-
-.post__title--noUnderline {
-  text-decoration: none;
-}
-
-.post__content {
-  font-size: 1.6rem;
-}
 /********** SIDE PROFILE **********/
-.profile_card {
-  max-width: 35rem;
-  margin-top: 5.6rem;
+.card__column {
+  grid-column: 2;
+  background-color: rgba(255, 255, 255, 1);
 }
 
-.card__pictures-ctn {
-  height: 35rem;
+.card-width {
+  width: 17%;
+  position: fixed;
+  top: 10%;
+  left: 7.5%;
 }
 
-.card__pictures--bg-ctn {
-  height: 23.2rem;
-  overflow: hidden;
-  background-position: center;
+.card-ctn {
+  border: none;
+  margin-bottom: 10rem;
 }
 
-.card_picture--pf {
+.card__picture {
   border-radius: 50%;
-  border: .7rem solid #fff;
-  width: 20rem;
-  height: 20rem;
-
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.card__info-ctn {
-  padding: 1.6rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .card__name {
   font-family: 'Oswald', sans-serif;
-  color: #F05454;
 }
 
-.card__about {
-  font-size: 1.8rem;
+.card__icons,
+.card__icons:link,
+.card__icons:visited {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  color: #FF6363;
+  border: 1px solid #FF6363;
+  border-radius: 50%;
+  transition: all .3s;
 }
 
-.card__icon-ctn {
- border-top: none;
+.card__icons:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: #000;
+  border: 1px solid #000;
 }
 
-.card__icons {
-  color: #BBBBBB;
+/********** RECENT ENTRIES **********/
+.entries-ctn {
+  padding: 0 4.8rem;
+  text-align: center;
 }
 
+.entries-ctn a,
+.entries-ctn a:link,
+.entries-ctn a:visited {
+  color: inherit;
+  transition: all .3s;
+}
+
+.entries-ctn a:hover {
+  color: #000;
+}
+
+/********** HOME -- POSTS **********/
+.header {
+  padding: 3.2rem;
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.post__column {
+  grid-column: 3;
+  height: 100%;
+  padding: 1.6rem;
+  border-left: 2px solid rgba(0, 0, 0);
+}
+
+.posts__ctn {
+  padding: 2.4rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 1);
+  /* border: .5px solid rgba(0, 0, 0); */
+}
+
+.post__title,
+.post__title:link,
+.post__title:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #e65959;
+  font-family: 'Oswald', sans-serif;
+  transition: all .3s;
+}
+
+.post__title:hover {
+  color: #000;
+}
 
 /********** FORM **********/
+.form {
+  width: 70%;
+  margin: 20rem auto;
+}
+
 .form input,
 .form textarea,
 .form button {
@@ -130,13 +180,7 @@ font-family: 'Oswald', sans-serif;
   resize: none;
 }
 
-.form__button-ctn {
-text-align: right;
-}
-
 /********** POST **********/
-
-
 /*
       SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128

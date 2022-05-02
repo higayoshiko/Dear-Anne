@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
       posts: post
     });
   });
+
 });
 
 module.exports = router;

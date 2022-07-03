@@ -17,10 +17,16 @@ body {
   background-color: rgba(230, 230, 230, .6);
 }
 
+/********** REUSABLE STYLES **********/
+.ctn {
+  max-width: 70rem;
+  margin-top: 15rem;
+}
+
 /********** GRID **********/
 .grid {
   display: grid;
-  grid-template-columns: 5% 22% 73%;
+  grid-template-columns: 10rem 30rem 1fr;
   height: 100vh;
 }
 
@@ -34,7 +40,7 @@ body {
 .navbar {
   position: fixed;
   height: 100%;
-  width: 5%;
+  width: 10rem;
   background-color: rgba(255, 255, 255, 1);
   border-right: .5px solid rgba(0, 0, 0);
 }
@@ -69,13 +75,14 @@ body {
 .card__column {
   grid-column: 2;
   background-color: rgba(255, 255, 255, 1);
+  position: relative;
 }
 
 .card-width {
-  width: 17%;
+  width: 20rem;
   position: fixed;
-  top: 10%;
-  left: 7.5%;
+  top: 15rem;
+  left: 15rem;
 }
 
 .card-ctn {
@@ -99,16 +106,15 @@ body {
   display: inline-block;
   width: 3rem;
   height: 3rem;
-  color: #FF6363;
-  border: 1px solid #FF6363;
+  color: rgba(0, 0, 0, 1);
+  border: 1px solid #000;
   border-radius: 50%;
   transition: all .3s;
 }
 
 .card__icons:hover {
-  color: rgba(255, 255, 255, 1);
-  background-color: #000;
-  border: 1px solid #000;
+  color: #FF6363;
+  border: 1px solid #FF6363;
 }
 
 /********** RECENT ENTRIES **********/
@@ -125,7 +131,7 @@ body {
 }
 
 .entries-ctn a:hover {
-  color: #000;
+  color: #FF6363;
 }
 
 /********** HOME -- POSTS **********/
@@ -142,26 +148,19 @@ body {
   border-left: 2px solid rgba(0, 0, 0);
 }
 
-.posts__ctn {
-  padding: 2.4rem;
-  height: 30rem;
-  background-color: rgba(255, 255, 255, 1);
-  /* border: .5px solid rgba(0, 0, 0); */
-}
-
 .post__title,
 .post__title:link,
 .post__title:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  color: #e65959;
+  color: rgba(0, 0, 0, 1);
   font-family: 'Oswald', sans-serif;
   transition: all .3s;
 }
 
 .post__title:hover {
-  color: #000;
+  color: #FF6363;
 }
 
 /********** FORM **********/
@@ -181,6 +180,34 @@ body {
 }
 
 /********** POST **********/
+.posts__title {
+  font-size: 50rem;
+  margin-bottom: 2rem;
+}
+
+/********** MEDIA QUERIES **********/
+/* 1300px */
+@media only screen and (max-width: 81.25em) {
+  .grid {
+    grid-template-columns: 30rem 1fr;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav, .navbar {
+    display: none;
+  }
+
+  .card-width {
+    left: 5rem;
+  }
+
+  
+}
+
+
 /*
       SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
